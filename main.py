@@ -218,7 +218,7 @@ def callback_query(call):
                 dt = datetime.datetime.fromtimestamp(original_msg.date)
                 dt = dt.strftime("%d-%m-%Y %H:%M:%S")
 
-                debug_link = {str(original_msg.from_user.id) + "/" + str(original_msg.date): {"url": Url, "user_id": original_msg.from_user.id, "chat_id": original_msg.chat.id, "username": original_msg.from_user.username,
+                debug_link = {str(original_msg.from_user.id) + "/" + str(original_msg.date): {"name-artist": f"{name} - {artist}", "user_id": original_msg.from_user.id, "chat_id": original_msg.chat.id, "username": original_msg.from_user.username,
                                                                                     "first_name": original_msg.from_user.first_name, "last_name": original_msg.from_user.last_name, "date": dt}}
                 data["links"].update(debug_link)
                 f.seek(0)
